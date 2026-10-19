@@ -137,9 +137,14 @@
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (res) {
           if (res.ok) {
+            var first = (data.get("name") || "").trim().split(/\s+/)[0];
+            document.getElementById("doneName").textContent = first ? ", " + first : "";
+            document.getElementById("doneEmail").textContent = (data.get("email") || "").trim() || "your inbox";
             form.hidden = true;
             done.hidden = false;
-            done.scrollIntoView({ behavior: "smooth", block: "center" });
+            var top = done.getBoundingClientRect().top + window.scrollY - 110;
+            window.scrollTo({ top: top, behavior: "smooth" });
+            done.focus({ preventScroll: true });
           } else {
             throw new Error(res.error || "Something went wrong.");
           }
