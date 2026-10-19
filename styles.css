@@ -474,3 +474,5 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .reel:hover img { transform: scale(1.04); }
 .reel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 60%, rgba(12, 23, 16, 0.65)); }
 .reel__tag { position: absolute; z-index: 1; left: 0.7rem; right: 0.7rem; bottom: 0.65rem; font-size: 0.72rem; letter-spacing: 0.04em; color: var(--cream); }
+.reels--4 { grid-template-columns: repeat(4, 1fr); max-width: 980px; }
+@media (max-width: 860px) { .reels--4 { grid-template-columns: repeat(2, 1fr); } }
