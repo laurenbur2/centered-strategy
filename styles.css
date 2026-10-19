@@ -1,7 +1,7 @@
 /* ============================================================
    Centered Strategy — styles (v5)
    Palette: pine, sage, cream, honey accent
-   Type: Fraunces (display serif) + Jost (sans)
+   Type: Cormorant Garamond (display serif) + Jost (sans)
    ============================================================ */
 
 :root {
@@ -19,7 +19,7 @@
   --ink:         #0C1710;
   --ink-soft:    #515A49;
 
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans:  "Jost", "Century Gothic", "Futura", system-ui, sans-serif;
 
   --maxw: 1180px;
@@ -40,6 +40,7 @@ body {
   line-height: 1.6;
   font-size: clamp(1rem, 0.97rem + 0.2vw, 1.075rem);
   -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums;
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -62,7 +63,7 @@ p { margin: 0; }
 .section__head { max-width: 680px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .section__head--center { margin-inline: auto; text-align: center; }
 .section__head--center .section__sub { margin-inline: auto; }
-.section__title { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.5rem); font-weight: 300; }
+.section__title { font-size: clamp(2.25rem, 1.55rem + 2.9vw, 3.9rem); font-weight: 400; }
 .section__title em { font-style: italic; color: var(--green); }
 .section__sub { margin-top: 1.1rem; color: var(--ink-soft); font-size: 1.1rem; max-width: 54ch; }
 .section__cta { margin-top: clamp(2rem, 4vw, 3rem); }
@@ -157,7 +158,7 @@ body.menu-open .nav__cta { visibility: hidden; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green-soft); box-shadow: 0 0 0 4px rgba(109, 137, 89, 0.18); animation: pulse 2.4s ease-in-out infinite; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(109, 137, 89, 0.05); } }
 .hero__title {
-  font-weight: 300; font-size: clamp(2.5rem, 1.3rem + 3.4vw, 4.5rem);
+  font-weight: 300; font-size: clamp(2.8rem, 1.45rem + 3.8vw, 5rem);
   letter-spacing: -0.03em; line-height: 1.0; margin-bottom: 1.6rem; text-wrap: balance;
 }
 .hero__title em { font-style: italic; color: var(--green); }
@@ -312,7 +313,7 @@ a.case:hover .case__img { transform: scale(1.03); }
 .case__tile img.is-mark { width: 36%; }
 .case__meta { padding-top: 1.2rem; }
 .case__tag { font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.7rem; color: var(--green-soft); }
-.case h3 { font-size: 1.5rem; font-weight: 400; margin: 0.5rem 0 0.45rem; }
+.case h3 { font-size: 1.75rem; font-weight: 500; margin: 0.5rem 0 0.45rem; }
 .case p { color: var(--ink-soft); font-size: 0.98rem; max-width: 48ch; }
 .case__result { display: flex; align-items: baseline; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--sand); }
 .case__result strong { font-family: var(--serif); font-weight: 300; font-size: 1.9rem; color: var(--green); line-height: 1; white-space: nowrap; }
