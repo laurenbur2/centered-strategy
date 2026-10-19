@@ -173,6 +173,7 @@ body.menu-open .nav__cta { visibility: hidden; }
 }
 .hero__logos span + span { margin-left: -10px; }
 .hero__logos img { width: 70%; height: 70%; object-fit: contain; }
+.hero__logos .is-cover img { width: 100%; height: 100%; object-fit: cover; }
 
 /* visual collage */
 .hero__visual { position: relative; aspect-ratio: 1 / 1; max-width: 600px; justify-self: end; width: 100%; }
@@ -268,6 +269,7 @@ body.menu-open .float-cta { opacity: 0; pointer-events: none; }
 .marquee__logo { height: clamp(30px, 3vw, 40px); width: auto; opacity: 0.85; transition: opacity 0.25s; }
 .marquee__logo--mark { height: clamp(42px, 4.4vw, 56px); }
 .marquee__logo--svrn { height: clamp(38px, 4vw, 50px); }
+.marquee__logo--badge { height: clamp(46px, 4.6vw, 58px); border-radius: 50%; }
 .marquee__logo:hover { opacity: 1; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
