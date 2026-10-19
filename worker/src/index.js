@@ -150,129 +150,64 @@ ${inner}
 </td></tr></table></body></html>`;
 }
 
-function renderConfirmation({ name, needs, message }) {
+function renderConfirmation({ name }) {
   const firstRaw = name.split(/\s+/)[0];
   const first = escapeHtml(firstRaw);
   const IMG = `${SITE}/assets`;
-  const F = { serif: SERIF, sans: SANS };
-  const excerpt = message.length > 220 ? message.slice(0, 217).trimEnd() + "..." : message;
-  const chips = needs.length
-    ? `<p style="margin:0 0 14px;">${needs
-        .map((n) => `<span style="display:inline-block;margin:0 6px 6px 0;padding:6px 14px;border:1px solid ${C.sage};border-radius:999px;font-family:${F.sans};font-size:12px;letter-spacing:.5px;color:${C.pine};">${escapeHtml(n)}</span>`)
-        .join("")}</p>`
-    : "";
-  const step = (num, label, title, body) => `
-      <tr><td style="padding:22px 0;border-top:1px solid ${C.line};">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-          <td width="56" style="vertical-align:top;font-family:${F.serif};font-style:italic;font-variant-numeric:lining-nums;font-size:30px;line-height:1;color:${C.sage};">${num}</td>
-          <td style="vertical-align:top;">
-            <p style="margin:0 0 4px;font-family:${F.sans};font-size:10px;letter-spacing:3px;color:${C.sage};">${label}</p>
-            <p style="margin:0 0 6px;font-family:${F.serif};font-size:22px;line-height:1.2;color:${C.ink};">${title}</p>
-            <p style="margin:0;font-family:${F.sans};font-size:14px;line-height:1.65;color:${C.soft};">${body}</p>
-          </td>
-        </tr></table>
-      </td></tr>`;
-  const stat = (num, label) => `
-      <td width="33%" align="center" style="padding:6px 8px;vertical-align:top;">
-        <p style="margin:0;font-family:${F.serif};font-size:30px;line-height:1;color:${C.cream};font-variant-numeric:lining-nums;">${num}</p>
-        <p style="margin:8px 0 0;font-family:${F.sans};font-size:11px;line-height:1.45;color:#A4B58B;">${label}</p>
+  const work = (img, alt, tag, title) => `
+      <td width="50%" style="vertical-align:top;padding:0 7px;">
+        <a href="${SITE}/projects.html" style="text-decoration:none;">
+          <img src="${IMG}/${img}" width="100%" alt="${alt}" style="display:block;width:100%;height:auto;border-radius:10px;">
+          <p style="margin:12px 0 2px;font-family:${SANS};font-size:9px;letter-spacing:3px;color:${C.sage};">${tag}</p>
+          <p style="margin:0;font-family:${SERIF};font-size:18px;line-height:1.25;color:${C.ink};">${title}</p>
+        </a>
       </td>`;
 
   const inner = `
 <!-- hero -->
 <tr><td background="${IMG}/email-hero.jpg" bgcolor="${C.ink}" style="background:${C.ink} url('${IMG}/email-hero.jpg') center/cover no-repeat;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(12,23,16,.62);"><tr><td align="center" style="padding:56px 36px 60px;">
-    <p style="margin:0;font-family:${F.serif};font-size:24px;color:${C.cream};">centered <span style="font-family:${F.sans};font-size:11px;letter-spacing:4px;color:#A4B58B;">STRATEGY</span></p>
-    <p style="margin:26px 0 0;font-family:${F.sans};font-size:10px;letter-spacing:4px;color:#A4B58B;">REQUEST RECEIVED</p>
-    <p style="margin:10px 0 0;font-family:${F.serif};font-style:italic;font-size:44px;line-height:1.05;color:${C.cream};">Thank you, ${first}.</p>
-    <p style="margin:14px auto 0;max-width:380px;font-family:${F.sans};font-size:14px;line-height:1.6;color:rgba(251,247,245,.85);">Your request is with us. We'll reply personally within two business days.</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(12,23,16,.45);"><tr><td align="center" style="padding:44px 36px 68px;">
+    <p style="margin:0;font-family:${SERIF};font-size:22px;color:${C.cream};">centered <span style="font-family:${SANS};font-size:10px;letter-spacing:4px;color:#A4B58B;">STRATEGY</span></p>
+    <p style="margin:58px 0 0;font-family:${SANS};font-size:10px;letter-spacing:5px;color:#A4B58B;">REQUEST RECEIVED</p>
+    <p style="margin:14px 0 0;font-family:${SERIF};font-style:italic;font-size:52px;line-height:1;color:${C.cream};">Thank you, ${first}.</p>
   </td></tr></table>
 </td></tr>
 
-<!-- intro -->
-<tr><td align="center" style="padding:48px 44px 8px;">
-  <p style="margin:0 0 14px;font-family:${F.sans};font-size:10px;letter-spacing:4px;color:${C.sage};">PEOPLE AT THE CENTER</p>
-  <p style="margin:0 0 18px;font-family:${F.serif};font-style:italic;font-size:26px;line-height:1.3;color:${C.ink};">Every great brand starts with someone willing to say what they're building.</p>
-  <p style="margin:0;font-family:${F.sans};font-size:15px;line-height:1.75;color:${C.soft};">We read every request ourselves, look at where you are today, and come to the call with ideas, not a sales script.</p>
-</td></tr>
-
-<!-- their request -->
-<tr><td style="padding:32px 44px 8px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.wash};border-radius:12px;"><tr><td style="padding:26px 28px;">
-    <p style="margin:0 0 14px;font-family:${F.sans};font-size:10px;letter-spacing:4px;color:${C.pine};">WHAT YOU SHARED</p>
-    ${chips}
-    <p style="margin:0;font-family:${F.serif};font-style:italic;font-size:18px;line-height:1.5;color:${C.ink};">&ldquo;${escapeHtml(excerpt)}&rdquo;</p>
-  </td></tr></table>
-</td></tr>
-
-<!-- next steps -->
-<tr><td style="padding:40px 44px 12px;">
-  <p style="margin:0 0 6px;font-family:${F.sans};font-size:10px;letter-spacing:4px;color:${C.sage};text-align:center;">WHAT HAPPENS NEXT</p>
-  <p style="margin:0 0 22px;font-family:${F.serif};font-size:30px;line-height:1.2;color:${C.ink};text-align:center;">Simple from here.</p>
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-    ${step("I", "WITHIN 2 BUSINESS DAYS", "We review your request", "We look at your brand, your audience, and what you want to grow.")}
-    ${step("II", "30 MINUTES, FREE", "A conversation, not a pitch", "We talk through your goals and give you a clear read on where to start.")}
-    ${step("III", "IN PLAIN LANGUAGE", "A clear plan and quote", "Scope, timeline, and a fixed price, so you know exactly what you're getting.")}
-  </table>
-</td></tr>
-
-<!-- founder -->
-<tr><td style="padding:28px 0 0;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.wash};"><tr>
-    <td width="46%" style="vertical-align:top;"><img src="${IMG}/lauren.jpg" width="100%" alt="Lauren Burandt" style="display:block;width:100%;height:auto;"></td>
-    <td style="vertical-align:middle;padding:24px 28px;">
-      <p style="margin:0 0 8px;font-family:${F.sans};font-size:10px;letter-spacing:4px;color:${C.pine};">YOUR STRATEGIST</p>
-      <p style="margin:0 0 10px;font-family:${F.serif};font-size:26px;line-height:1.1;color:${C.ink};">Lauren Burandt</p>
-      <p style="margin:0;font-family:${F.sans};font-size:13px;line-height:1.65;color:${C.soft};">Founder of Centered Strategy. Grows founder and wellness brands on social, and builds the websites and systems behind them.</p>
-    </td>
-  </tr></table>
-</td></tr>
-
-<!-- proof -->
-<tr><td style="background:${C.ink};padding:34px 24px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-    ${stat("370K+", "followers grown organically")}
-    ${stat("265K", "for Bonetti Explosives, from 500")}
-    ${stat("5 yrs", "building founder brands")}
-  </tr></table>
+<!-- message -->
+<tr><td align="center" style="padding:46px 52px 40px;">
+  <p style="margin:0 0 18px;font-family:${SERIF};font-size:24px;line-height:1.35;color:${C.ink};">Your request is with us.</p>
+  <p style="margin:0;font-family:${SANS};font-size:15px;line-height:1.75;color:${C.soft};">We read every request personally and will be in touch within two business days to set up a time to talk.</p>
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:30px auto 0;"><tr><td style="border-top:1px solid ${C.sage};width:40px;height:1px;font-size:0;line-height:0;">&nbsp;</td></tr></table>
 </td></tr>
 
 <!-- work -->
-<tr><td style="padding:44px 44px 12px;" align="center">
-  <p style="margin:0 0 6px;font-family:${F.sans};font-size:10px;letter-spacing:4px;color:${C.sage};">WHILE YOU WAIT</p>
-  <p style="margin:0 0 22px;font-family:${F.serif};font-size:30px;line-height:1.2;color:${C.ink};">A look at the work.</p>
+<tr><td style="padding:0 37px 8px;">
+  <p style="margin:0 0 4px;font-family:${SANS};font-size:10px;letter-spacing:5px;color:${C.sage};text-align:center;">WHILE YOU WAIT</p>
+  <p style="margin:0 0 26px;font-family:${SERIF};font-size:30px;line-height:1.2;color:${C.ink};text-align:center;">A look at the work.</p>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-    <td width="50%" style="padding-right:6px;vertical-align:top;"><img src="${IMG}/proj-tigersoul.jpg" width="100%" alt="Tiger Soul website" style="display:block;width:100%;height:auto;border-radius:8px;"></td>
-    <td width="50%" style="padding-left:6px;vertical-align:top;"><img src="${IMG}/proj-casa.jpg" width="100%" alt="Casa da Nova Vida website" style="display:block;width:100%;height:auto;border-radius:8px;"></td>
+    ${work("proj-tigersoul.jpg", "Tiger Soul website", "WEBSITE", "Tiger Soul")}
+    ${work("proj-casa.jpg", "Casa da Nova Vida website", "WEBSITE", "Casa da Nova Vida")}
   </tr></table>
-  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:28px auto 0;"><tr><td style="background:${C.pine};border-radius:999px;">
-    <a href="${SITE}/projects.html" style="display:inline-block;padding:14px 30px;font-family:${F.sans};font-size:12px;letter-spacing:2px;font-weight:600;color:${C.cream};text-decoration:none;">SEE THE WORK</a>
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:34px auto 0;"><tr><td style="background:${C.pine};border-radius:999px;">
+    <a href="${SITE}/projects.html" style="display:inline-block;padding:15px 34px;font-family:${SANS};font-size:11px;letter-spacing:3px;font-weight:600;color:${C.cream};text-decoration:none;">SEE ALL WORK</a>
   </td></tr></table>
 </td></tr>
 
 <!-- sign-off -->
-<tr><td align="center" style="padding:36px 44px 44px;">
-  <p style="margin:0 0 18px;font-family:${F.sans};font-size:14px;line-height:1.7;color:${C.soft};">Anything to add before we talk? Just reply to this email.</p>
-  <p style="margin:0;font-family:${F.serif};font-style:italic;font-size:24px;color:${C.ink};">Lauren</p>
-  <p style="margin:4px 0 0;font-family:${F.sans};font-size:10px;letter-spacing:3px;color:${C.sage};">CENTERED STRATEGY</p>
+<tr><td align="center" style="padding:42px 44px 46px;">
+  <p style="margin:0;font-family:${SERIF};font-style:italic;font-size:22px;color:${C.ink};">Lauren</p>
+  <p style="margin:4px 0 0;font-family:${SANS};font-size:9px;letter-spacing:4px;color:${C.sage};">CENTERED STRATEGY</p>
 </td></tr>`;
 
   const text = `Thank you, ${firstRaw}.
 
-Your request is with us. We'll reply personally within two business days.
-${needs.length ? `\nYou mentioned: ${needs.join(", ")}\n` : ""}
-What happens next
-I.   We review your request (within 2 business days)
-II.  A free 30-minute conversation, not a pitch
-III. A clear plan and quote, in plain language
+Your request is with us. We read every request personally and will be in touch within two business days to set up a time to talk.
 
-See the work: ${SITE}/projects.html
-
-Anything to add before we talk? Just reply to this email.
+While you wait, a look at the work: ${SITE}/projects.html
 
 Lauren
 Centered Strategy`;
-  return { html: emailFrame("Your request is with us. We'll reply within two business days.", inner), text };
+  return { html: emailFrame("Your request is with us. We'll be in touch within two business days.", inner), text };
 }
 
 // Full-bleed frame for the client-facing confirmation
