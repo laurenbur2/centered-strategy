@@ -452,3 +452,4 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+.case__tile--black { background: #000; }
