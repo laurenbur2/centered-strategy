@@ -499,3 +499,4 @@ a.case:hover .case__tile img { transform: scale(1.08); }
 @media (max-width: 900px) { .cases--3 { grid-template-columns: 1fr; max-width: 520px; } }
 /* founder photo: less tall */
 #founder .founder__img { aspect-ratio: 1 / 1; max-width: 460px; }
+.price-note { display: block; margin-top: 0.45rem; font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink-soft); max-width: 46ch; line-height: 1.4; }
