@@ -57,10 +57,10 @@ p { margin: 0; }
   letter-spacing: 0.28em; font-size: 0.72rem; font-weight: 400;
   color: var(--green-soft); margin-bottom: 1rem;
 }
-.section { padding: clamp(4.5rem, 9vw, 8rem) 0; }
+.section { padding: clamp(3.5rem, 6.5vw, 5.75rem) 0; }
 .section--tint { background: var(--sage-pale); }
 .section--warm { background: var(--cream-warm); }
-.section__head { max-width: 680px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.section__head { max-width: 680px; margin-bottom: clamp(2rem, 3.5vw, 3rem); }
 .section__head--center { margin-inline: auto; text-align: center; }
 .section__head--center .section__sub { margin-inline: auto; }
 .section__title { font-size: clamp(2.25rem, 1.55rem + 2.9vw, 3.9rem); font-weight: 400; }
@@ -370,7 +370,7 @@ a.case:hover .case__img { transform: scale(1.03); }
 .faq details { border-bottom: 1px solid var(--sand); }
 .faq summary {
   list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
-  padding: 1.4rem 0; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); font-weight: 400;
+  padding: 1.05rem 0; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem); font-weight: 400;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; font-family: var(--sans); font-weight: 300; font-size: 1.6rem; color: var(--green-soft); line-height: 1; transition: transform 0.3s var(--ease); }
@@ -489,3 +489,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .case__tile img { transition: transform 0.5s var(--ease); }
 a.case:hover .case__tile img { transform: scale(1.08); }
 @media (prefers-reduced-motion: reduce) { a.case:hover .case__tile img, a.case:hover .case__img { transform: none; } }
+
+/* home: compact 3-up selected work */
+.cases--3 { grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 2.5vw, 2rem); }
+.cases--3 .case__frame { aspect-ratio: 4 / 3; }
+.cases--3 .case h3 { font-size: 1.45rem; }
+.cases--3 .case p { font-size: 0.92rem; }
+.cases--3 .case__result strong { font-size: 1.55rem; }
+@media (max-width: 900px) { .cases--3 { grid-template-columns: 1fr; max-width: 520px; } }
+/* founder photo: less tall */
+#founder .founder__img { aspect-ratio: 1 / 1; max-width: 460px; }
