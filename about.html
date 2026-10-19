@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
 
@@ -48,23 +48,35 @@
 
   <main>
 
-    <section class="page-hero">
-      <div class="container page-hero__inner">
-        <p class="eyebrow">About</p>
-        <h1>Marketing that's <em>centered</em> on what matters.</h1>
-        <p>People at the center. Impact in every direction.</p>
+    <section class="hero hero--page">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">About</p>
+          <h1 class="hero__title">Marketing that's <em>centered</em> on what matters.</h1>
+          <p class="hero__lede">Centered Strategy is led by Lauren Burandt. She grows founder and wellness brands on social, organically, and builds the websites and systems behind them herself.</p>
+          <div class="hero__cta">
+            <a href="contact.html" class="btn btn--lg">Book a free call <span aria-hidden="true">&rarr;</span></a>
+            <a href="projects.html" class="btn btn--lg btn--ghost">See the work</a>
+          </div>
+        </div>
+        <div class="hero__visual hero__visual--portrait">
+          <figure class="portrait">
+            <img src="assets/lauren.jpg" alt="Lauren Burandt, founder of Centered Strategy" />
+          </figure>
+          <div class="chip-stat chip-stat--a" aria-hidden="true"><strong>500 &rarr; 265K</strong><span>Bonetti Explosives on Instagram</span></div>
+          <div class="chip-stat chip-stat--b" aria-hidden="true"><strong>Lauren Burandt</strong><span>Founder, Centered Strategy</span></div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="founder">
-      <div class="container split split--media">
-        <div class="reveal">
-          <img class="founder__img" src="assets/about.jpg" alt="Lauren Burandt, founder of Centered Strategy" loading="lazy" />
-        </div>
-        <div class="founder__copy reveal">
+      <div class="container split">
+        <header class="reveal">
           <p class="eyebrow">Meet the founder</p>
           <h2 class="section__title">One partner, from first post to booked client.</h2>
-          <p>Centered Strategy is led by Lauren Burandt. For five years she has grown founder and wellness brands on social, organically, including Bonetti Explosives from 500 to 265K followers and Kuya Wellness from 2K to 15K in a year.</p>
+        </header>
+        <div class="founder__copy reveal">
+          <p>For five years Lauren has grown founder and wellness brands on social, organically, including Bonetti Explosives from 500 to 265K followers and Kuya Wellness from 2K to 15K in a year.</p>
           <p>She also designs and builds the websites, CRMs, and funnels herself. So the person planning your content is the same one building where it sends people, and nothing gets lost between agencies.</p>
           <p>We started Centered Strategy on a simple belief: the best marketing doesn't manufacture hype. It tells the truth, beautifully.</p>
           <p class="founder__sig">Lauren Burandt<span>Founder</span></p>
