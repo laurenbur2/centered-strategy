@@ -309,7 +309,7 @@ a.case:hover .case__img { transform: scale(1.03); }
 .case__tile { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--forest); }
 .case__tile img { width: 46%; height: auto; }
 .case__tile img.is-badge { width: 38%; border-radius: 50%; }
-.case__tile img.is-mark { width: 28%; }
+.case__tile img.is-mark { width: 36%; }
 .case__meta { padding-top: 1.2rem; }
 .case__tag { font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.7rem; color: var(--green-soft); }
 .case h3 { font-size: 1.5rem; font-weight: 400; margin: 0.5rem 0 0.45rem; }
@@ -452,4 +452,14 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* case tiles: background matches each logo; only Kuya sits on brand green */
+.case__tile img.is-full { width: auto; height: 78%; }
+.case__tile--bonetti { background: #fff; box-shadow: inset 0 0 0 1px var(--sand); }
+.case__tile--beond { background: #4a397d; }
+.case__tile--illum { background: #f9f6e3; box-shadow: inset 0 0 0 1px var(--sand); }
 .case__tile--black { background: #000; }
+.case__tile--black img { width: 62%; }
+.case--wide { grid-column: 1 / -1; }
+.case--wide .case__frame { aspect-ratio: 21 / 9; }
+.case--wide .case__img { object-position: center 40%; }
