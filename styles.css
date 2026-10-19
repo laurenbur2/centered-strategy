@@ -308,6 +308,8 @@ body.menu-open .float-cta { opacity: 0; pointer-events: none; }
 a.case:hover .case__img { transform: scale(1.03); }
 .case__tile { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--forest); }
 .case__tile img { width: 46%; height: auto; }
+.case__tile img.is-badge { width: 38%; border-radius: 50%; }
+.case__tile img.is-mark { width: 28%; }
 .case__meta { padding-top: 1.2rem; }
 .case__tag { font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.7rem; color: var(--green-soft); }
 .case h3 { font-size: 1.5rem; font-weight: 400; margin: 0.5rem 0 0.45rem; }
