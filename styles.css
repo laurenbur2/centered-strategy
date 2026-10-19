@@ -483,3 +483,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
 .hero__visual--portrait .chip-stat--a { left: 0; bottom: 10%; }
 .hero__visual--portrait .chip-stat--b { right: 0; top: 8%; }
+
+/* logo tiles: gentle grow on hover */
+.case__tile img { transition: transform 0.5s var(--ease); }
+a.case:hover .case__tile img { transform: scale(1.08); }
+@media (prefers-reduced-motion: reduce) { a.case:hover .case__tile img, a.case:hover .case__img { transform: none; } }
