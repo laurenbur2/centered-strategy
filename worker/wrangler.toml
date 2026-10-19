@@ -1,0 +1,14 @@
+name = "centered-strategy-forms"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[vars]
+# Sender for the request notification (centeredstrategy.com is verified in Resend).
+FROM_EMAIL = "Centered Strategy <forms@centeredstrategy.com>"
+# Sender for the visitor confirmation. Empty = confirmations off. Replies go to
+# TO_EMAIL (reply_to), since centeredstrategy.com has no inbox yet.
+CONFIRM_FROM = "Lauren at Centered Strategy <hello@centeredstrategy.com>"
+# Where requests are delivered. Comma-separated for multiple recipients.
+TO_EMAIL = "lburandt2@gmail.com"
+# Sites allowed to POST here.
+ALLOWED_ORIGINS = "https://laurenbur2.github.io,https://centeredstrategy.com,https://www.centeredstrategy.com,http://127.0.0.1:8413,http://localhost:8413"

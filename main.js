@@ -111,6 +111,48 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
+  /* --- contact form: validate, send to the Worker, show thanks --- */
+  var form = document.getElementById("contactForm");
+  if (form) {
+    var status = document.getElementById("formStatus");
+    var submit = document.getElementById("formSubmit");
+    var done = document.getElementById("formDone");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.textContent = "";
+      var missing = false;
+      ["name", "email", "message"].forEach(function (id) {
+        var el = document.getElementById(id);
+        var bad = !el.value.trim() || (id === "email" && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+        el.closest(".field").classList.toggle("is-invalid", bad);
+        if (bad) missing = true;
+      });
+      if (missing) { status.textContent = "Please fill in your name, a valid email, and a few words about your project."; return; }
+      var data = new FormData(form);
+      if (!data.get("cf-turnstile-response")) { status.textContent = "Please complete the verification below."; return; }
+
+      submit.disabled = true;
+      submit.textContent = "Sending...";
+      fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            form.hidden = true;
+            done.hidden = false;
+            done.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else {
+            throw new Error(res.error || "Something went wrong.");
+          }
+        })
+        .catch(function (err) {
+          status.textContent = err.message || "Something went wrong. Please try again.";
+          if (window.turnstile) window.turnstile.reset();
+          submit.disabled = false;
+          submit.innerHTML = 'Send request <span aria-hidden="true">&rarr;</span>';
+        });
+    });
+  }
+
   /* --- scroll reveal --- */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
