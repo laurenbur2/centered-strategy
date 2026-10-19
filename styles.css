@@ -463,3 +463,5 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .case--wide { grid-column: 1 / -1; }
 .case--wide .case__frame { aspect-ratio: 21 / 9; }
 .case--wide .case__img { object-position: center 40%; }
+.hero--page { border-bottom: 1px solid var(--sand); }
+.hero--page .hero__visual { aspect-ratio: 1.1 / 1; }

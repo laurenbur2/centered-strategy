@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=13" />
 </head>
 <body>
 
@@ -48,12 +48,31 @@
 
   <main>
 
-    <section class="page-hero">
-      <div class="container page-hero__inner">
-        <p class="eyebrow">Services</p>
-        <h1>Social media, and the <em>system</em> behind it.</h1>
-        <p>Two services that work best together: we grow your audience on social, and build the website, CRM, and funnel that turn that attention into clients.</p>
-        <div class="hero__cta"><a href="contact.html" class="btn btn--lg">Book a free call</a></div>
+    <section class="hero hero--page">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Services</p>
+          <h1 class="hero__title">Social media, and the <em>system</em> behind it.</h1>
+          <p class="hero__lede">Two services that work best together: we grow your audience on social, and build the website, CRM, and funnel that turn that attention into clients.</p>
+          <div class="hero__cta">
+            <a href="contact.html" class="btn btn--lg">Book a free call <span aria-hidden="true">&rarr;</span></a>
+            <a href="#social" class="btn btn--lg btn--ghost">See what's included</a>
+          </div>
+          <div class="hero__proof">
+            <p><strong>Social</strong> from $3,000/mo &nbsp;&middot;&nbsp; <strong>Websites</strong> from $2,000 &nbsp;&middot;&nbsp; <strong>CRM &amp; funnels</strong> from $4,000</p>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <figure class="frame frame--browser">
+            <div class="frame__bar"><i></i><i></i><i></i><span>casadanovavida.com</span></div>
+            <img src="assets/proj-casa.jpg" alt="" />
+          </figure>
+          <figure class="frame frame--phone">
+            <img src="assets/ways2well-1.jpg" alt="" />
+          </figure>
+          <div class="chip-stat chip-stat--a"><strong>500 &rarr; 265K</strong><span>Bonetti Explosives on Instagram</span></div>
+          <div class="chip-stat chip-stat--b"><strong>Site + CRM + funnel</strong><span>one connected back end</span></div>
+        </div>
       </div>
     </section>
 
