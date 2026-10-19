@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a call | Centered Strategy</title>
+  <meta name="description" content="Book a free 30-minute call with Centered Strategy about social media, a new website, or your CRM and sales funnel." />
+  <meta property="og:title" content="Book a call | Centered Strategy" />
+  <meta property="og:description" content="Book a free 30-minute call with Centered Strategy about social media, a new website, or your CRM and sales funnel." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="brand" aria-label="Centered Strategy home">
+        <img src="assets/logo-mark.png" alt="" class="brand__mark" width="34" height="34" />
+        <span class="brand__name"><span class="brand__word">centered</span><span class="brand__strategy">Strategy</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="is-current">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--sm nav__cta">Book a call</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="is-current">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn--lg btn--light">Book a free call</a>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <p class="eyebrow">Book a call</p>
+        <h1>Let's talk about <em>what you're building</em>.</h1>
+        <p>Tell us a little below and we'll reply within two business days to set up a free 30-minute call.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact__inner reveal">
+        <form class="contact__form" id="contactForm" action="mailto:hello@centeredstrategy.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com" />
+          </div>
+          <fieldset class="field field--full">
+            <legend>What do you need help with?</legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="need" value="Social media" /><span>Social media</span></label>
+              <label class="chip"><input type="checkbox" name="need" value="Website" /><span>Website</span></label>
+              <label class="chip"><input type="checkbox" name="need" value="CRM and funnel" /><span>CRM &amp; funnel</span></label>
+              <label class="chip"><input type="checkbox" name="need" value="Not sure yet" /><span>Not sure yet</span></label>
+            </div>
+          </fieldset>
+          <div class="field field--full">
+            <label for="website">Website or Instagram <span style="font-weight:300">(optional)</span></label>
+            <input type="text" id="website" name="website" placeholder="yourbrand.com or @yourbrand" />
+          </div>
+          <div class="field field--full">
+            <label for="brand">Tell us about your project</label>
+            <textarea id="brand" name="brand" rows="5" placeholder="What you're building, and where you'd love to grow."></textarea>
+          </div>
+          <button type="submit" class="btn btn--lg">Request a call</button>
+        </form>
+
+        <div class="contact__side">
+          <div><h3>Free, 30 minutes</h3><p>No pitch. Just a clear read on where to start.</p></div>
+          <div><h3>Clear pricing</h3><p>Social from $3,000/mo. Websites from $2,000. CRM &amp; funnels from $4,000.</p></div>
+          <div><h3>Prefer email?</h3><p><a href="mailto:hello@centeredstrategy.com">hello@centeredstrategy.com</a></p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="brand brand--light">
+        <img src="assets/logo-mark.png" alt="" class="brand__mark" width="26" height="26" />
+        <span class="brand__name">Centered Strategy</span>
+      </a>
+      <p class="footer__tag">People at the center. Impact in every direction.</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="services.html">Services</a>
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:hello@centeredstrategy.com">hello@centeredstrategy.com</a>
+      </nav>
+    </div>
+    <div class="container footer__base">
+      <span>&copy; <span id="year"></span> Centered Strategy. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="main.js?v=6"></script>
+</body>
+</html>

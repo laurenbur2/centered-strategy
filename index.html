@@ -3,308 +3,326 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Centered Strategy — Marketing rooted in purpose</title>
-  <meta name="description" content="Centered Strategy is a marketing agency helping conscious founders and personal brands grow. We build websites, create content, and design growth strategy — with a specialty in functional health, sustainable living, and natural healing." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Centered Strategy — Marketing rooted in purpose" />
-  <meta property="og:description" content="We help good people build great brands. Websites, content, and growth strategy for founders in functional health, sustainable living, and natural healing." />
+  <title>Centered Strategy | Social media, websites & sales systems for founders</title>
+  <meta name="description" content="Centered Strategy runs social media for founders, from strategy to posting, and builds the website, CRM, and sales funnel behind it. Deepest in wellness, open to any field." />
+  <meta property="og:title" content="Centered Strategy | Social media, websites & sales systems for founders" />
+  <meta property="og:description" content="Centered Strategy runs social media for founders, from strategy to posting, and builds the website, CRM, and sales funnel behind it. Deepest in wellness, open to any field." />
   <meta property="og:type" content="website" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="#top" class="brand" aria-label="Centered Strategy home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
-            <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M16 4c4 5 4 11 0 24-4-13-4-19 0-24Z" fill="currentColor" opacity="0.9"/>
-            <circle cx="16" cy="16" r="2.4" fill="var(--cream)"/>
-          </svg>
-        </span>
-        <span class="brand__name">Centered&nbsp;Strategy</span>
+      <a href="index.html" class="brand" aria-label="Centered Strategy home">
+        <img src="assets/logo-mark.png" alt="" class="brand__mark" width="34" height="34" />
+        <span class="brand__name"><span class="brand__word">centered</span><span class="brand__strategy">Strategy</span></span>
       </a>
-
       <nav class="nav__links" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#specialties">Specialties</a>
-        <a href="#approach">Approach</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn btn--sm">Start a project</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <a href="contact.html" class="btn btn--sm nav__cta">Book a call</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="index.html" class="is-current">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn--lg btn--light">Book a free call</a>
+  </div>
+
   <main id="top">
 
-    <!-- ===== HERO ===== -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="blob blob--1"></div>
-        <div class="blob blob--2"></div>
-      </div>
-      <div class="container hero__inner">
-        <p class="eyebrow reveal">A marketing agency with roots</p>
-        <h1 class="hero__title reveal">
-          Marketing strategy,<br />
-          <em>rooted in purpose.</em>
-        </h1>
-        <p class="hero__lede reveal">
-          We help good people build great brands — founders, startups, and changemakers
-          who want to grow something that actually contributes to the world.
-        </p>
-        <div class="hero__cta reveal">
-          <a href="#contact" class="btn btn--lg">Let's build together</a>
-          <a href="#services" class="btn btn--ghost btn--lg">See what we do</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="badge"><span class="dot" aria-hidden="true"></span>Now booking November projects</p>
+          <h1 class="hero__title">Grow the audience. <em>Build the system</em> that turns it into clients.</h1>
+          <p class="hero__lede">We run your social media, from strategy to posting, and build the website, CRM, and sales funnel behind it. For founders and personal brands, deepest in wellness.</p>
+          <div class="hero__cta">
+            <a href="contact.html" class="btn btn--lg">Book a free call <span aria-hidden="true">&rarr;</span></a>
+            <a href="projects.html" class="btn btn--lg btn--ghost">See the work</a>
+          </div>
+          <div class="hero__proof">
+            <div class="hero__logos" aria-hidden="true">
+              <span><img src="assets/logo-ways2well.png" alt="" /></span>
+              <span><img src="assets/logo-kuya.png" alt="" /></span>
+              <span><img src="assets/logo-svrn.svg" alt="" /></span>
+              <span><img src="assets/logo-otac.png" alt="" /></span>
+            </div>
+            <p><strong>358K+ followers</strong> grown organically for founders and wellness brands</p>
+          </div>
         </div>
-        <ul class="hero__tags reveal" aria-label="Areas of focus">
-          <li>Functional health</li>
-          <li>Sustainable living</li>
-          <li>Natural &amp; alternative healing</li>
-        </ul>
+
+        <div class="hero__visual" aria-hidden="true">
+          <svg class="hero__mark" viewBox="0 0 300 300">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#EDE9C9" />
+                <stop offset="45%" stop-color="#A4B58B" />
+                <stop offset="100%" stop-color="#6D8959" />
+              </radialGradient>
+            </defs>
+            <g id="rays"></g>
+            <circle class="core" cx="150" cy="150" r="18" fill="url(#glow)" />
+            <circle class="core" cx="150" cy="150" r="6.5" fill="#EDE9C9" />
+          </svg>
+          <figure class="frame frame--browser">
+            <div class="frame__bar"><i></i><i></i><i></i><span>within.center</span></div>
+            <img src="assets/proj-within.jpg" alt="" />
+          </figure>
+          <figure class="frame frame--phone">
+            <img src="assets/proj-ways2well.jpg" alt="" />
+          </figure>
+          <div class="chip-stat chip-stat--a"><strong>150K &rarr; 215K</strong><span>Ways2Well on Instagram</span></div>
+          <div class="chip-stat chip-stat--b"><strong>Site + CRM</strong><span>built and connected</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== MISSION ===== -->
-    <section class="mission">
-      <div class="container mission__inner reveal">
-        <p class="mission__text">
-          Our goal is simple: <strong>help good people build something great.</strong>
-          Brands that heal, ground, and grow — and that leave the world a little better
-          than they found it.
-        </p>
+    <section class="proof" aria-label="Results">
+      <div class="container stats">
+        <div class="stats__item"><span class="stats__num"><span data-count="358">358</span>K<small>+</small></span><span class="stats__label">followers added organically for the brands we've grown</span></div>
+        <div class="stats__item"><span class="stats__num">+<span data-count="65">65</span>K</span><span class="stats__label">organic followers for Ways2Well, a clinical health brand</span></div>
+        <div class="stats__item"><span class="stats__num">5 <small>yrs</small></span><span class="stats__label">building founder and personal brands</span></div>
+      </div>
+    <div class="marquee" aria-label="Brands we've worked with">
+      <div class="marquee__track">
+        <img class="marquee__logo" src="assets/logo-within.png" alt="Within Center" />
+        <img class="marquee__logo" src="assets/logo-awkn.png" alt="AWKN Ranch" />
+        <img class="marquee__logo marquee__logo--mark" src="assets/logo-kuya.png" alt="Kuya Wellness" />
+        <img class="marquee__logo" src="assets/logo-ways2well.png" alt="Ways2Well" />
+        <img class="marquee__logo" src="assets/logo-beond.svg" alt="Beond Ibogaine" />
+        <img class="marquee__logo marquee__logo--mark" src="assets/logo-otac.png" alt="Ancestral Encounters" />
+        <img class="marquee__logo marquee__logo--svrn" src="assets/logo-svrn.svg" alt="SVRN Man" />
+        <img class="marquee__logo" src="assets/logo-within.png" alt="" aria-hidden="true" />
+        <img class="marquee__logo" src="assets/logo-awkn.png" alt="" aria-hidden="true" />
+        <img class="marquee__logo marquee__logo--mark" src="assets/logo-kuya.png" alt="" aria-hidden="true" />
+        <img class="marquee__logo" src="assets/logo-ways2well.png" alt="" aria-hidden="true" />
+        <img class="marquee__logo" src="assets/logo-beond.svg" alt="" aria-hidden="true" />
+        <img class="marquee__logo marquee__logo--mark" src="assets/logo-otac.png" alt="" aria-hidden="true" />
+        <img class="marquee__logo marquee__logo--svrn" src="assets/logo-svrn.svg" alt="" aria-hidden="true" />
+      </div>
+    </div>
+    </section>
+
+    <section class="statement" aria-label="Why us">
+      <div class="container">
+        <p class="statement__text reveal">Most founders hire one person for social and someone else for the website. <span>The posts get attention, and it has nowhere to go.</span> We build both sides, so every follower has a path to becoming a client.</p>
       </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
     <section class="section" id="services">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">What we do</p>
-          <h2 class="section__title">Everything your brand needs to grow.</h2>
-          <p class="section__sub">
-            Strategy, design, and content under one roof — built to work together,
-            built to grow.
-          </p>
+          <h2 class="section__title">Two things, done <em>properly</em>.</h2>
+          <p class="section__sub">Use one, or let them work together. Either way, one senior partner owns it from strategy to launch.</p>
         </header>
-
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg>
+        <div class="pillars">
+          <article class="pillar reveal" id="social">
+            <span class="pillar__num">01</span>
+            <h3>Social media</h3>
+            <p class="pillar__lede">Strategy, content, and posting, handled. We grow your audience organically and keep your brand showing up like you would, without it taking over your week.</p>
+            <ul class="checklist">
+              <li><strong>Strategy</strong> and a monthly content calendar</li>
+              <li><strong>Content creation</strong>: graphics, short-form video, carousels, captions</li>
+              <li><strong>Posting</strong> and community management</li>
+              <li><strong>Creator and influencer</strong> partnerships</li>
+              <li><strong>Monthly reporting</strong> on what's working</li>
+            </ul>
+            <div class="pillar__foot">
+              <div class="prices"><span class="price">From <strong>$3,000</strong>/mo</span></div>
+              <a href="services.html#social" class="link-more">Details <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <h3>Website design &amp; build</h3>
-            <p>
-              High-level websites that feel as good as they look — fast, beautiful,
-              and built to turn visitors into believers.
-            </p>
           </article>
-
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          <article class="pillar reveal" id="systems">
+            <span class="pillar__num">02</span>
+            <h3>Websites &amp; systems</h3>
+            <p class="pillar__lede">The website, plus what happens after someone lands on it. We build the site, connect your CRM, and set up the funnel that turns visitors into booked clients.</p>
+            <ul class="checklist">
+              <li><strong>Custom websites</strong>, designed and built, with SEO foundations</li>
+              <li><strong>CRM setup</strong> and migration, with leads tagged by source</li>
+              <li><strong>Sales funnels</strong>: lead capture, booking, follow-up emails</li>
+              <li><strong>Automations</strong> that cut out the manual work</li>
+              <li><strong>Portals and dashboards</strong> when you need them</li>
+            </ul>
+            <div class="pillar__foot">
+              <div class="prices">
+                <span class="price">Websites from <strong>$2,000</strong></span>
+                <span class="price">CRM &amp; funnels from <strong>$4,000</strong></span>
+              </div>
+              <a href="services.html#systems" class="link-more">Details <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <h3>Content creation &amp; development</h3>
-            <p>
-              Content that sounds like you and travels across platforms — from
-              short-form video to long-form story, built for reach and resonance.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
-            </div>
-            <h3>Growth strategy</h3>
-            <p>
-              A marketing strategy built to grow — clear positioning, the right
-              channels, and a plan that compounds over time instead of chasing trends.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            </div>
-            <h3>Personal brand building</h3>
-            <p>
-              Years of experience building big personal brands — we shape the story,
-              the look, and the strategy that makes a founder unforgettable.
-            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== SPECIALTIES ===== -->
-    <section class="section section--tint" id="specialties">
-      <div class="container specialties__inner">
-        <div class="specialties__copy reveal">
-          <p class="eyebrow">Where we go deep</p>
-          <h2 class="section__title">Built for brands that help people heal.</h2>
-          <p class="section__sub">
-            We speak the language of wellness. That fluency means less time explaining
-            your world to your agency — and more time growing it.
-          </p>
-        </div>
-
-        <ul class="specialties__list">
-          <li class="spec reveal">
-            <span class="spec__num">01</span>
-            <div>
-              <h3>Functional &amp; integrative health</h3>
-              <p>Practitioners, clinics, and brands taking a root-cause approach to wellbeing.</p>
-            </div>
-          </li>
-          <li class="spec reveal">
-            <span class="spec__num">02</span>
-            <div>
-              <h3>Sustainable living</h3>
-              <p>Products and movements helping people live lighter on the earth.</p>
-            </div>
-          </li>
-          <li class="spec reveal">
-            <span class="spec__num">03</span>
-            <div>
-              <h3>Alternative medicine &amp; natural healing</h3>
-              <p>Modalities and makers reconnecting people with time-honored ways of healing.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== APPROACH ===== -->
-    <section class="section" id="approach">
+    <section class="section section--tint" id="work">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">How we work</p>
-          <h2 class="section__title">Grounded process. Real growth.</h2>
+          <p class="eyebrow">Selected work</p>
+          <h2 class="section__title">Real brands, real numbers.</h2>
         </header>
+        <div class="cases">
+          <a class="case reveal" href="projects.html#social">
+            <div class="case__frame"><img class="case__img" src="assets/proj-ways2well.jpg" alt="A Ways2Well social post" loading="lazy" /></div>
+            <div class="case__meta">
+              <span class="case__tag">Social media &middot; Ways2Well</span>
+              <h3>A clinical health brand, grown organically</h3>
+              <p>Strategy, content, and management for a health-optimization brand in a category where every word has to be careful.</p>
+              <div class="case__result"><strong>150K &rarr; 215K</strong><span>Instagram followers, no paid spend</span></div>
+            </div>
+          </a>
+          <a class="case reveal" href="projects.html#social">
+            <div class="case__frame"><div class="case__tile"><img src="assets/logo-svrn.svg" alt="SVRN Man" loading="lazy" /></div></div>
+            <div class="case__meta">
+              <span class="case__tag">Personal brand &middot; The Sovereign Man</span>
+              <h3>A founder's audience, built from near zero</h3>
+              <p>Positioning and a content system for a coach building his personal brand on Instagram.</p>
+              <div class="case__result"><strong>1K &rarr; 30K</strong><span>Instagram followers, organic</span></div>
+            </div>
+          </a>
+          <a class="case reveal" href="https://www.within.center/" target="_blank" rel="noopener">
+            <div class="case__frame"><img class="case__img" src="assets/proj-within.jpg" alt="Within Center website" loading="lazy" /></div>
+            <div class="case__meta">
+              <span class="case__tag">Website &middot; Within Center</span>
+              <h3>Ceremonial ketamine, made calm</h3>
+              <p>Website design and build for an Austin healing center: trustworthy, clear, and easy to move through.</p>
+            </div>
+          </a>
+          <a class="case reveal" href="https://www.awknranch.com/" target="_blank" rel="noopener">
+            <div class="case__frame"><img class="case__img" src="assets/proj-awkn.jpg" alt="AWKN Ranch website" loading="lazy" /></div>
+            <div class="case__meta">
+              <span class="case__tag">Website &middot; AWKN Ranch</span>
+              <h3>A wellness ranch, brought online</h3>
+              <p>Website design and build for a nature-rooted retreat in West Austin.</p>
+            </div>
+          </a>
+        </div>
+        <div class="section__cta reveal"><a href="projects.html" class="link-more">See all the work <span aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </section>
 
+    <section class="section" id="who">
+      <div class="container split">
+        <header class="reveal">
+          <p class="eyebrow">Who we work with</p>
+          <h2 class="section__title">Fluent in the worlds you work in.</h2>
+          <p class="section__sub">Wellness and healing are high-trust spaces. Get the tone wrong and people leave. Because we live in these fields, your marketing arrives already fluent, credible, and never hype-y.</p>
+        </header>
+        <div class="reveal">
+          <ul class="niches">
+            <li class="niche"><span class="niche__num">01</span><div><h3>Functional &amp; integrative health</h3><p>Practitioners, clinics, and brands treating root causes.</p></div></li>
+            <li class="niche"><span class="niche__num">02</span><div><h3>Psychedelic &amp; mental-health therapy</h3><p>Centers, clinicians, and guides moving the field forward, responsibly.</p></div></li>
+            <li class="niche"><span class="niche__num">03</span><div><h3>Eco-living &amp; sustainability</h3><p>Products, spaces, and habits that tread more lightly.</p></div></li>
+            <li class="niche"><span class="niche__num">04</span><div><h3>Purpose-driven personal brands</h3><p>Founders, coaches, and experts building trust at scale.</p></div></li>
+            <li class="niche niche--open"><span class="niche__num">+</span><div><h3>And founders in any field</h3><p>Websites, CRMs, and funnels work the same everywhere. Good work is good work.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--warm" id="founder">
+      <div class="container split split--media">
+        <div class="reveal">
+          <img class="founder__img" src="assets/about.jpg" alt="Lauren Burandt, founder of Centered Strategy" loading="lazy" />
+        </div>
+        <div class="founder__copy reveal">
+          <p class="eyebrow">Meet the founder</p>
+          <h2 class="section__title">One partner, from first post to booked client.</h2>
+          <p>Centered Strategy is led by Lauren Burandt. For five years she has grown founder and wellness brands on social, organically, and she designs and builds the websites and systems herself.</p>
+          <p>That means one person who understands your whole path: the content that brings people in, the site they land on, and the follow-up that turns them into clients. Nothing gets lost between agencies.</p>
+          <p class="founder__sig">Lauren Burandt<span>Founder</span></p>
+          <div class="section__cta"><a href="about.html" class="link-more">More about us <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section__title">Simple from the first call.</h2>
+        </header>
         <ol class="steps">
-          <li class="step reveal">
-            <span class="step__num">1</span>
-            <h3>Listen &amp; root</h3>
-            <p>We learn your mission, your people, and what makes you different — before a single tactic.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">2</span>
-            <h3>Shape the strategy</h3>
-            <p>Positioning, messaging, and a channel plan designed for sustainable, compounding growth.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">3</span>
-            <h3>Build &amp; create</h3>
-            <p>Website, content, and brand assets — crafted to a high level and ready to scale.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">4</span>
-            <h3>Grow &amp; refine</h3>
-            <p>We measure what matters and keep refining, so your brand grows for years — not weeks.</p>
-          </li>
+          <li class="step reveal"><span class="step__num">01</span><h3>Free call</h3><p>Thirty minutes on what you're building, where you want to grow, and what's in the way.</p></li>
+          <li class="step reveal"><span class="step__num">02</span><h3>Clear plan &amp; quote</h3><p>A short written plan with scope, timeline, and a fixed price. No jargon, no surprises.</p></li>
+          <li class="step reveal"><span class="step__num">03</span><h3>Build &amp; run</h3><p>We build it, launch it, and keep it running, with check-ins and reporting along the way.</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section section--dark" id="about">
-      <div class="container about__inner">
-        <div class="about__copy reveal">
-          <p class="eyebrow eyebrow--light">About Centered Strategy</p>
-          <h2 class="section__title">Marketing that's centered on what matters.</h2>
-          <p>
-            Centered Strategy was built on a belief: the best marketing doesn't manufacture
-            hype — it tells the truth, beautifully. We partner with founders and brands who
-            are genuinely trying to make people healthier, the planet kinder, and the culture
-            more whole.
-          </p>
-          <p>
-            With years of experience building big personal brands and growing brands across
-            the wellness space, we bring the strategy, taste, and execution to help you build
-            something that lasts.
-          </p>
-          <a href="#contact" class="btn btn--lg btn--light">Work with us</a>
-        </div>
-        <div class="about__stats reveal">
-          <div class="stat"><span class="stat__num">10+</span><span class="stat__label">Years building brands</span></div>
-          <div class="stat"><span class="stat__num">3</span><span class="stat__label">Specialty niches we live in</span></div>
-          <div class="stat"><span class="stat__num">∞</span><span class="stat__label">Care for the people we serve</span></div>
+    <section class="section section--tint" id="faq">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow">Questions</p>
+          <h2 class="section__title">Good to know.</h2>
+        </header>
+        <div class="faq reveal">
+          <details><summary>How much does it cost?</summary><p>Social media starts at $3,000 a month. Websites start at $2,000, and CRM and sales funnel setups start at $4,000. You'll get a fixed quote after our first call, so you know the full number before anything starts.</p></details>
+          <details><summary>How long does a website take?</summary><p>Most websites take three to six weeks from kickoff to launch. A CRM and funnel build usually adds four to six weeks, and we can run both side by side.</p></details>
+          <details><summary>How much of my time will this take?</summary><p>A kickoff call to start, then short reviews as we go. For social, most clients spend about an hour a week approving content. We handle the rest.</p></details>
+          <details><summary>Do you only work with wellness brands?</summary><p>No. Wellness and healing are where we go deepest, but we build websites, CRMs, and funnels for founders and teams in any field.</p></details>
+          <details><summary>Is there a contract?</summary><p>Social media starts with a three-month term so the strategy has time to work, then goes month to month. Build projects are paid by milestone, half to start each one and half on delivery.</p></details>
+          <details><summary>Do I own everything?</summary><p>Yes. Your website, accounts, content, and CRM are set up in your name. If we ever part ways, you keep all of it.</p></details>
         </div>
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section class="section contact" id="contact">
-      <div class="container contact__inner reveal">
-        <p class="eyebrow">Let's begin</p>
-        <h2 class="section__title">Ready to build something great?</h2>
-        <p class="section__sub">
-          Tell us about your brand and where you want to grow. We'll get back to you within
-          two business days.
-        </p>
-
-        <form class="contact__form" id="contactForm" action="mailto:hello@centeredstrategy.com" method="post" enctype="text/plain">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name" />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@email.com" />
-          </div>
-          <div class="field field--full">
-            <label for="brand">Tell us about your brand</label>
-            <textarea id="brand" name="brand" rows="4" placeholder="What you're building, and where you'd love to grow."></textarea>
-          </div>
-          <button type="submit" class="btn btn--lg">Send message</button>
-        </form>
-
-        <p class="contact__alt">
-          Prefer email? <a href="mailto:hello@centeredstrategy.com">hello@centeredstrategy.com</a>
-        </p>
+    <section class="section cta-band">
+      <div class="container reveal">
+        <p class="eyebrow">Let's talk</p>
+        <h2 class="section__title">Ready to <em>grow</em>, and have somewhere for it to go?</h2>
+        <p>Tell us what you're building. We'll come back with a clear plan and a fixed price.</p>
+        <a href="contact.html" class="btn btn--lg btn--light">Book a free call</a>
+        <p class="cta-band__note">30 minutes. No pitch, just a clear next step.</p>
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <a href="contact.html" class="float-cta" id="floatCta" aria-label="Book a free 30-minute call">
+    <span class="float-cta__text"><strong>Let's talk about your project</strong><span>Free 30-minute call</span></span>
+    <span class="float-cta__btn">Book a call <span aria-hidden="true">&rarr;</span></span>
+  </a>
+
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="#top" class="brand brand--light">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-            <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M16 4c4 5 4 11 0 24-4-13-4-19 0-24Z" fill="currentColor" opacity="0.9"/>
-          </svg>
-        </span>
+      <a href="index.html" class="brand brand--light">
+        <img src="assets/logo-mark.png" alt="" class="brand__mark" width="26" height="26" />
         <span class="brand__name">Centered Strategy</span>
       </a>
-      <p class="footer__tag">Helping good people build something great.</p>
+      <p class="footer__tag">People at the center. Impact in every direction.</p>
       <nav class="footer__links" aria-label="Footer">
-        <a href="#services">Services</a>
-        <a href="#specialties">Specialties</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:hello@centeredstrategy.com">hello@centeredstrategy.com</a>
       </nav>
     </div>
     <div class="container footer__base">
-      <span>© <span id="year"></span> Centered Strategy. All rights reserved.</span>
+      <span>&copy; <span id="year"></span> Centered Strategy. All rights reserved.</span>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=6"></script>
 </body>
 </html>

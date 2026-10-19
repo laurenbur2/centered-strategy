@@ -1,2 +1,6 @@
 .gstack/
 TigerSoul-SEO-Report.pdf
+preview-tmp/
+client-work/
+.DS_Store
+.claude/

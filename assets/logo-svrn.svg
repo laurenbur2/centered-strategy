@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 132" fill="none">
+  <defs>
+    <linearGradient id="svrnGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E6C173"/>
+      <stop offset="0.55" stop-color="#C7A870"/>
+      <stop offset="1" stop-color="#A8863F"/>
+    </linearGradient>
+  </defs>
+  <!-- crenellated (castle-top) shield -->
+  <path fill="url(#svrnGold)" d="M22 20 L22 8 L35 8 L35 18 L42 18 L42 8 L55 8 L55 18 L62 18 L62 8 L75 8 L75 20
+    L75 60 C75 88 62 106 48.5 116 C35 106 22 88 22 60 Z"/>
+  <!-- bold geometric S knocked out of the shield -->
+  <path fill="#12180F" d="M33 38 h31 v9 h-31 Z
+    M33 45 h9 v10 h-9 Z
+    M33 52.5 h31 v9 h-31 Z
+    M55 60 h9 v9 h-9 Z
+    M33 67 h31 v9 h-31 Z"/>
+  <!-- wordmark -->
+  <text x="100" y="60" font-family="Jost, sans-serif" font-weight="600" font-size="42" letter-spacing="3" fill="#F3EFE4">SVRN</text>
+  <text x="100" y="106" font-family="Jost, sans-serif" font-weight="600" font-size="42" letter-spacing="10" fill="#F3EFE4">MAN</text>
+</svg>
