@@ -91,3 +91,19 @@
   window.addEventListener("resize", frame);
   frame();
 })();
+
+/* work page: cards in the header drift apart as you scroll */
+(function () {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".wk__stage [data-depth]"));
+  if (!cards.length || window.innerWidth < 760) return;
+  function f() {
+    var y = Math.min(window.scrollY, 900);
+    cards.forEach(function (c, i) {
+      var d = parseFloat(c.dataset.depth);
+      c.style.translate = ((i % 2 ? 1 : -1) * y * 0.04 * d).toFixed(1) + "px " + (-y * 0.12 * d).toFixed(1) + "px";
+    });
+  }
+  window.addEventListener("scroll", function () { requestAnimationFrame(f); }, { passive: true });
+  f();
+})();
