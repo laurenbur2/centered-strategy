@@ -18,7 +18,7 @@
  *   ALLOWED_ORIGINS   — sites allowed to POST here
  */
 
-const SITE = "https://laurenbur2.github.io/centered-strategy";
+const SITE = "https://centeredstrategy.com";
 
 export default {
   async fetch(request, env) {
