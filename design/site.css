@@ -516,3 +516,15 @@
 .page-projects .nav:not(.is-scrolled) .nav__toggle span { background: var(--forest-deep); }
 .page-projects .proof { background: var(--forest); }
 .page-projects .proof .marquee { background: var(--forest); border-top: 0; }
+
+/* home hero: scene fills the whole hero, text sits on top */
+.hero-sun:not(.hero-sun--page):not(.hero-sun--about) { min-height: clamp(640px, 100svh, 1000px); display: flex; flex-direction: column; }
+.hero-sun:not(.hero-sun--page):not(.hero-sun--about) .scene { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; z-index: 0; }
+.hero-sun:not(.hero-sun--page):not(.hero-sun--about) .hero-sun__copy { z-index: 2; padding-top: clamp(1rem, 3vw, 2.5rem); }
+.hero-sun::before { z-index: 1; background: radial-gradient(60% 45% at 50% 28%, rgba(44,55,38,.55), rgba(44,55,38,0) 75%); }
+.hero-sun h1, .hero-sun__lede { text-shadow: 0 2px 22px rgba(12,23,16,.35); }
+@media (max-width: 640px) {
+  .hero-sun:not(.hero-sun--page):not(.hero-sun--about) { min-height: 720px; }
+}
+.hero-sun::before { background: radial-gradient(55% 42% at 50% 30%, rgba(44,55,38,.82), rgba(44,55,38,.35) 60%, rgba(44,55,38,0) 85%); }
+.cta-sun .scene--cta { height: 100%; }
