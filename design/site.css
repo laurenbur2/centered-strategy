@@ -196,6 +196,7 @@
 .work-card__media > img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: scale .7s cubic-bezier(.2,.7,.2,1); }
 .work-card__tile { width: 100%; height: 100%; display: grid; place-items: center; background: #fff; transition: scale .7s cubic-bezier(.2,.7,.2,1); }
 .work-card__tile img { width: 52%; }
+.work-card__media:has(> .work-card__tile) { border-bottom: 1px solid rgba(12, 23, 16, .1); }
 .work-card:hover .work-card__media > img, .work-card:hover .work-card__tile { scale: 1.05; }
 .work-card__badge { position: absolute; left: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: .45rem; padding: .3rem .8rem .3rem .3rem;
   background: rgba(251,247,245,.94); border-radius: 999px; font-size: .78rem; font-weight: 500; color: var(--forest); box-shadow: 0 8px 20px -12px rgba(12,23,16,.5); }
