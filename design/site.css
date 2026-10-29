@@ -73,6 +73,15 @@
 @keyframes drift { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: .9; } 100% { transform: translate(40px, -240px); opacity: 0; } }
 @keyframes twinkle { 50% { transform: scale(.5) rotate(25deg); opacity: .6; } }
 @media (prefers-reduced-motion: reduce) { .hero-sun *, .hero-sun *::before { animation: none !important; } }
+/* phones: the rough filter re-renders every animation frame and the rays/ripples repaint the whole scene, so drop them */
+@media (max-width: 900px), (pointer: coarse) {
+  .scene [filter] { filter: none; }
+  .scene .rays, .scene .ripple, .scene .glow { animation: none; }
+  .scene .ripple { opacity: 0; }
+  .scene .seed { animation: none; opacity: 0; }
+}
+/* scenes stop animating while scrolled out of view (set in motion.js) */
+.scene.is-off, .scene.is-off * { animation-play-state: paused !important; }
 
 @media (max-width: 640px) {
   .hero-sun { padding-top: 1.75rem; }

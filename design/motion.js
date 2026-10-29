@@ -16,6 +16,15 @@
   }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
   anims.forEach(function (el) { io.observe(el); });
 
+  /* pause the sun scenes while they're off screen */
+  var sceneIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { e.target.classList.toggle("is-off", !e.isIntersecting); });
+  });
+  document.querySelectorAll(".scene").forEach(function (el) { sceneIO.observe(el); });
+
+  /* phones: skip the scroll-driven parallax; it repaints the big SVG scenes on every scroll frame */
+  if (window.matchMedia("(max-width: 900px), (pointer: coarse)").matches) return;
+
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
   function clamp(v, a, b) { return Math.min(b, Math.max(a, v)); }
@@ -49,8 +58,16 @@
   function frame() {
     var y = window.scrollY, vh = window.innerHeight;
 
-    floaters.forEach(function (el) {
-      var r = el.getBoundingClientRect();
+    /* read every position first, then write, so the browser lays out once per frame */
+    var fr = floaters.map(function (el) { return el.getBoundingClientRect(); });
+    var tq = tilts.map(function (el) { return centerOffset(el, vh); });
+    var mq = media.map(function (el) { return centerOffset(el, vh); });
+    var aq = founderArch ? centerOffset(founderArch, vh) : 0;
+    var q = collage ? centerOffset(collage, vh) : 0;
+    var cr = cta && cta.getBoundingClientRect();
+
+    floaters.forEach(function (el, i) {
+      var r = fr[i];
       el.style.translate = "0 " + ((r.top + r.height / 2 - vh / 2) * parseFloat(el.dataset.speed)).toFixed(1) + "px";
     });
 
@@ -63,7 +80,6 @@
     }
 
     if (collage) {
-      var q = centerOffset(collage, vh);
       if (browser) { browser.style.translate = (-q * 90).toFixed(1) + "px " + (q * 20).toFixed(1) + "px"; browser.style.rotate = (q * 2).toFixed(2) + "deg"; }
       if (phone) { phone.style.translate = (q * 30).toFixed(1) + "px " + (-q * 110).toFixed(1) + "px"; phone.style.rotate = (-q * 6).toFixed(2) + "deg"; }
       chips.forEach(function (c, i) { c.style.translate = "0 " + ((i ? 1 : -1) * q * 50).toFixed(1) + "px"; });
@@ -71,17 +87,16 @@
     }
 
     if (cta) {
-      var r = cta.getBoundingClientRect();
-      var cp = clamp((vh - r.top) / (r.height + vh * 0.15), 0, 1);
+      var cp = clamp((vh - cr.top) / (cr.height + vh * 0.15), 0, 1);
       var e = 1 - Math.pow(1 - cp, 3);
       if (ctaSun) ctaSun.style.translate = "0 " + ((1 - e) * 220).toFixed(1) + "px";
       ctaHills.forEach(function (h, i) { h.style.translate = "0 " + ((1 - e) * (30 + i * 25)).toFixed(1) + "px"; });
       ctaPlants.forEach(function (p, i) { p.style.scale = clamp(e * 1.15 - (i % 4) * 0.06, 0.05, 1).toFixed(3); });
     }
 
-    tilts.forEach(function (el) { el.style.rotate = (centerOffset(el, vh) * 14).toFixed(2) + "deg"; });
-    media.forEach(function (el) { el.style.translate = "0 " + (centerOffset(el, vh) * 26).toFixed(1) + "px"; });
-    if (founderArch) founderArch.style.translate = "0 " + (centerOffset(founderArch, vh) * 18).toFixed(1) + "px";
+    tilts.forEach(function (el, i) { el.style.rotate = (tq[i] * 14).toFixed(2) + "deg"; });
+    media.forEach(function (el, i) { el.style.translate = "0 " + (mq[i] * 26).toFixed(1) + "px"; });
+    if (founderArch) founderArch.style.translate = "0 " + (aq * 18).toFixed(1) + "px";
 
     ticking = false;
   }
